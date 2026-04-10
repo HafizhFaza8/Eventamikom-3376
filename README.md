@@ -1,6 +1,14 @@
-Nama : Hafizh Naufal Faza
-NIM  : 24.12.3376
-Link : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/
+<h2>Identitas</h2>
+Nama : Hafizh Naufal Faza <br>
+NIM  : 24.12.3376 <br>
+<h2>Live Demo</h2>
+Link : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/<br>
+<h2>Tugas 1 </h2>
+HOME : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/<br>
+PROFIL : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/profil<br>
+KATALOG : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/katalog<br>
+BANTUAN : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/bantuan<br>
+KONTAK : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/contact<br>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
