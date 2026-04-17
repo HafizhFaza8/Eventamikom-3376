@@ -9,6 +9,13 @@ PROFIL : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/profil<br>
 KATALOG : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/katalog<br>
 BANTUAN : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/bantuan<br>
 KONTAK : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/kontak<br>
+<h2>Tugas 2 </h2>
+1. Halaman Dashboard : 
+2. Halaman event :
+3. Halaman Transaksi :
+4. Halaman Beranda :
+5. Halaman Detail Event :
+6. Halaman Checkout :
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
