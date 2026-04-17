@@ -10,12 +10,12 @@ KATALOG : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/katalog<br>
 BANTUAN : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/bantuan<br>
 KONTAK : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/kontak<br>
 <h2>Tugas 2 </h2>
-1. Halaman Dashboard : 
-2. Halaman event :
-3. Halaman Transaksi :
-4. Halaman Beranda :
-5. Halaman Detail Event :
-6. Halaman Checkout :
+1. Halaman Dashboard : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/admin <br>
+2. Halaman event : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/admin/events <br>
+3. Halaman Transaksi : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/admin/transactions <br>
+4. Halaman Beranda : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/ <br>
+5. Halaman Detail Event : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/event-detail.html <br>
+6. Halaman Checkout : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/checkout.html <br>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
