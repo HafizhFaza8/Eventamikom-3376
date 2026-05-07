@@ -16,6 +16,9 @@ KONTAK : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/kontak<br>
 4. Halaman Beranda : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/ <br>
 5. Halaman Detail Event : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/event-detail.html <br>
 6. Halaman Checkout : https://eventamikom-3376-main-bjm8ma.free.laravel.cloud/checkout.html <br>
+
+<h2>Tugas 3 </h2>
+Menambahkan database migration/seeding
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
