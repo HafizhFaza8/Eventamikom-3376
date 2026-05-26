@@ -21,6 +21,7 @@ Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 Route::get('/katalog', [EventController::class, 'index'])->name('katalog'); 
 Route::get('/tentang', function () { return view('about'); })->name('about');
 
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // --- Rute Admin Area ---
 // Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
@@ -45,9 +46,16 @@ Route::get('/tentang', function () { return view('about'); })->name('about');
 
 // });
 Route::prefix('admin')->name('admin.')->group(function () {
+    // Dashboard Admin Utama
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    
+    // Manajemen Event
     Route::resource('events', EventAdminController::class);
+    
+    // Manajemen Kategori
     Route::resource('categories', CategoryController::class);
+    
+    // Manajemen Partner
     Route::resource('partners', PartnerController::class);
-
 });
 

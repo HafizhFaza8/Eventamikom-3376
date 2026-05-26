@@ -34,7 +34,7 @@
             </div>
             <img src="assets/concert.png" alt="Concert"
                 class="rounded-[2rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/5] object-center">
-
+ 
             <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl z-20 border border-white">
                 <div class="flex items-center gap-4">
                     <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
@@ -51,7 +51,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Events Grid -->
     <section id="events" class="max-w-7xl mx-auto px-6 py-20">
         <div class="flex justify-between items-end mb-12">
@@ -63,7 +63,7 @@
                 <button class="p-3 border rounded-xl hover:bg-white hover:shadow-md transition">Semua Kategori</button>
             </div>
         </div>
-
+ 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Event Card 1 -->
             <div
@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </div>
-
+ 
             <!-- Event Card 2 -->
             <div
                 class="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
             </div>
-
+ 
             <!-- Event Card 3 -->
             <div
                 class="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden">
@@ -154,38 +154,46 @@
         </div>
     </section>
     <section class="max-w-7xl mx-auto px-6 py-20">
-
-    <div class="text-center mb-14">
-        <h2 class="text-3xl font-extrabold mb-3">
-            Didukung Oleh Partner Terpercaya
-        </h2>
-
-        <p class="text-slate-500 font-medium">
-            Platform AmikomEventHub bekerja sama dengan berbagai partner terbaik.
-        </p>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-
-        @foreach($partners as $partner)
-
-        <div class="bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition p-6 flex flex-col items-center justify-center group">
-
-            <img 
-                src="{{ asset('storage/' . $partner->logo_url) }}"
-                alt="{{ $partner->name }}"
-                class="w-24 h-24 object-contain mb-4 group-hover:scale-110 transition"
-            >
-
-            <h3 class="font-bold text-slate-700 text-center">
-                {{ $partner->name }}
-            </h3>
-
+ 
+    <div class="flex justify-between items-end mb-12">
+        <div>
+            <h2 class="text-3xl font-extrabold mb-2">Didukung Oleh Partner Terpercaya</h2>
+            <p class="text-slate-500 font-medium">Platform AmikomEventHub bekerja sama dengan berbagai partner terbaik.</p>
         </div>
-
-        @endforeach
-
     </div>
-
+ 
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ 
+        @foreach($partners as $partner)
+ 
+        <div class="group bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden">
+ 
+            <div class="relative overflow-hidden aspect-[3/4]">
+                <img 
+                    src="{{ asset('storage/' . $partner->logo_url) }}"
+                    alt="{{ $partner->name }}"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                >
+                <div class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur rounded-lg text-xs font-bold uppercase text-indigo-600">
+                    Partner
+                </div>
+            </div>
+ 
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2 group-hover:text-indigo-600 transition">
+                    {{ $partner->name }}
+                </h3>
+                <div class="flex justify-between items-center pt-4 border-t">
+                    <span class="text-sm font-semibold text-slate-500">Official Partner</span>
+                    <span class="px-5 py-2 bg-indigo-50 text-indigo-600 rounded-xl font-bold">Terpercaya</span>
+                </div>
+            </div>
+ 
+        </div>
+ 
+        @endforeach
+ 
+    </div>
+ 
 </section>
     @endsection
