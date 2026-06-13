@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -12,9 +13,9 @@ class EventController extends Controller
         return view('welcome');
     }
 
-    public function show()
+    public function show(Event $event)
     {
-        return View("event-detail");
+        return view('event-detail', compact('event'));
     }
     //halaman Checkout
     public function checkout()
