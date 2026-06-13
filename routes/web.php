@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\CategoryController;  
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\EventController as EventAdminController;
+use App\Http\Controllers\Admin\TransactionController;
 
 // --- Rute User Area ---
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -21,26 +23,30 @@ Route::get('/katalog', [EventController::class, 'index'])->name('katalog');
 Route::get('/tentang', function () { return view('about'); })->name('about');
 
 
-// --- Rute Admin Area ---
-Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
-    
-    // Halaman Dashboard Utama Admin
-    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    
-    // Halaman Laporan Transaksi
-    Route::get('/transactions', function () {
-        return view('admin.transactions');
-    })->name('transactions');
+// Redirect global /login ke route admin.login
+Route::get('/login', function () {
+    return redirect()->route('admin.login');
+})->name('login');
 
-    // TUGAS PERTEMUAN 3: Manajemen Kategori 
-    Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+// Grouping untuk URL berawalan /admin
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Rute Login bebas akses
+    Route::get('login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('login', [AuthController::class, 'login'])->name('login.post');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-    // --- MANAJEMEN EVENT ---
-    // Gunakan Route::resource karena otomatis membuatkan rute admin.events.index, admin.events.create, dll.
-    Route::resource('events', EventAdminController::class);
-    
-    // Catatan: Saya telah menghapus Route::get('/events') manual dan grup admin dobel 
-    // agar tidak terjadi bentrok (conflict) dengan Route::resource di atas.
+    // Mengamankan Route Administrasi di balik tembok (Middleware)
+    Route::middleware(['auth', 'admin'])->group(function () {
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        // Halaman Laporan Transaksi
+        Route::get('transactions', [TransactionController::class, 'index'])->name('transactions.index');
+
+        // Manajemen Kategori (tetap tersedia)
+        Route::get('categories', [CategoryController::class, 'index'])->name('categories.index');
+
+        // Manajemen event menggunakan resource controller
+        Route::resource('events', EventAdminController::class);
+    });
 
 });
 
