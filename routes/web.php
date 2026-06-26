@@ -22,9 +22,13 @@ Route::post('checkout/{event}', [CheckoutController::class, 'store'])->name('che
 Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 
 // Rute Tambahan Pertemuan 2
-Route::get('/katalog', [EventController::class, 'index'])->name('katalog'); 
-Route::get('/tentang', function () { return view('about'); })->name('about');
+Route::get('/katalog', [EventController::class, 'index'])->name('katalog');
+Route::get('/tentang', function () {
+    return view('about'); })->name('about');
 
+
+Route::get('/payment/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'payment'])->name('checkout.payment');
+Route::get('/success/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout.success');
 
 // Redirect global /login ke route admin.login
 Route::get('/login', function () {
