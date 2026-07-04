@@ -24,7 +24,8 @@ Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 // Rute Tambahan Pertemuan 2
 Route::get('/katalog', [EventController::class, 'index'])->name('katalog');
 Route::get('/tentang', function () {
-    return view('about'); })->name('about');
+    return view('about');
+})->name('about');
 
 
 Route::get('/payment/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'payment'])->name('checkout.payment');
@@ -53,6 +54,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         // Manajemen event menggunakan resource controller
         Route::resource('events', EventAdminController::class);
+
+        Route::post('/midtrans/callback', [\App\Http\Controllers\MidtransWebhookController::class, 'handle']);
     });
 
 });
